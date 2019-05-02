@@ -13,3 +13,23 @@ CREATE TABLE orders (
 );
 CREATE UNIQUE INDEX customers_name ON customers (name);
 CREATE INDEX orders_idx_customer ON orders (customer);
+
+
+Running application:
+
+<root_project># morbo theapp.pl # SQLite schema and population will be created.
+
+Population:
+
+sqlite> select * from customers;
+1|Boris
+2|James
+
+sqlite> select * from orders;
+1|Boris order 1|1
+2|Boris order 2|1
+3|James order 1|2
+4|James order 2|2
+
+
+

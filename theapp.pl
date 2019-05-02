@@ -1,15 +1,17 @@
 use Mojolicious::Lite;
 
+use Cwd;
 use FindBin;
 use lib $FindBin::Bin;
-
 use Syntax::Keyword::Try;
 use Theapp::Schema;
 
-my $db_file = '/home/lew/theapp.db';
-unlink $db_file if -e $db_file;
+# It is DB deploy on the fly.
+my $cwd = cwd;
+my $db_file = "$cwd/theapp_population.db";
+`$cwd/db_populate.pl $db_file`;
 my $schema = Theapp::Schema->connect('dbi:SQLite:' . $db_file);
-$schema->deploy;
+#$schema->deploy;
 
 ### Customer
 
