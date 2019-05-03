@@ -1,5 +1,7 @@
 
-# SQLite Schema
+"Customer(name) has many Order(desc)" implementation.
+
+SQLite Schema:
 
 CREATE TABLE customers (
   id INTEGER PRIMARY KEY NOT NULL,
