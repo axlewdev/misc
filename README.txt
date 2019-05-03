@@ -17,7 +17,7 @@ CREATE INDEX orders_idx_customer ON orders (customer);
 
 Running application:
 
-<root_project># morbo theapp.pl # SQLite schema and population will be created.
+<root_project># morbo app_start.pl # SQLite schema and population will be created.
 
 Population:
 
