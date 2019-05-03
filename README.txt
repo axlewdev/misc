@@ -31,5 +31,9 @@ sqlite> select * from orders;
 3|James order 1|2
 4|James order 2|2
 
+Testing:
+
+<root_project># prove -I ./ ./t
+
 
 
